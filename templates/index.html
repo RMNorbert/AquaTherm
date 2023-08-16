@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature and Humidity</title>
+    <style>
+        body{
+            margin-top: 85px;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: lightblue;
+        }
+        .box {
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            border-radius: 12px;
+            background-color: #d1d1d1;
+            color: #010C80;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 5px 70px;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            border-style: solid;
+            border-width: thin;
+            margin: 10px 0 10px 0;
+            box-shadow: rgba(0,0,0,0.05) 0 54px 55px,
+            rgba(0,0,0,0.05) 0 -12px 30px,
+            rgba(0,0,0,0.05) 0 4px 6px,
+            rgba(0,0,0,0.05) 0 12px 3px,
+            rgba(0,0,0,0.05) 0 -3px 15px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<div class="box">
+<div>
+    <select id="type">
+        <option value="cold">Cold</option>
+        <option value="warm">Warm</option>
+        <option value="tropical">Tropical</option>
+    </select>
+    <button onclick="setType()">Set aquarium type</button>
+    <button onclick="switchState()" id="button">Turn Sensor {{ state }}</button>
+    <h1 id="sensorState">Sensor is {{ state }}</h1>
+    <h2>Aquarium type: <span id="aquariumType">{{ aquariumType }}</span></h2>
+    <h2>Temperature: <span id="temperature">{{ temperature }}</span> °C</h2>
+    <h2>Humidity: <span id="humidity">{{ humidity }}</span> %</h2>
+    <h2>Status: <span id="status">{{ status }}</span></h2>
+</div>
+<div>
+    <h2><span id="fanStatus">Fan: {{ fanStatus }}</span></h2>
+    <h2><span id="tapStatus">Tap: {{ tapStatus }}</span></h2>
+    <h2>Highest Temperature: <span id="highestTemperature">{{ highestTemperature }}</span></h2>
+</div>
+</div>
+<script>
+    function switchState() {
+            $.post('/state', function(response) {
+                $('#sensorState').text('Sensor is ' + response.state);
+                $('#button').text('Turn Sensor ' + response.state);
+                $('#stateButton').text('Sensor ' + response.state);
+                $('#highestTemperature').text(response.highestTemperature + ' °C')
+            });
+    }
+    function setType() {
+            var newType = $('#type').val();
+            $.post('/type', { type: newType }, function(response) {
+                $('#aquariumType').text(response.aquariumType);
+            });
+    }
+    function updateData() {
+        if ($('#sensorState').text() === 'Sensor is ON') {
+            $.get('/reading', function(data) {
+                $('#status').text(data.status);
+                $('#temperature').text(data.temperature);
+                $('#humidity').text(data.humidity);
+                $('#fanStatus').text(data.fanStatus);
+                $('#tapStatus').text(data.tapStatus);
+            });}
+    }
+        // Update data every 5 seconds
+        setInterval(updateData, 5000);
+
+        // Initial data update
+        updateData();
+
+</script>
+</body>
+</html>

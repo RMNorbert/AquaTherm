@@ -1,0 +1,6 @@
+pip
+sqlalchemy
+Flask
+prometheus_client
+prometheus_flask_exporter
+pyserial
