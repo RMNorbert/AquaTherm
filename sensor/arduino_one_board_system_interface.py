@@ -1,6 +1,6 @@
 from sensor.status_analyzer import *
 from database.db import *
-from sensor.arduino.oneBoard.arduino_sensor_controller import *
+from sensor.arduino.arduino_sensor_controller import *
 
 sensor_controller = ArduinoSensorController()
 
