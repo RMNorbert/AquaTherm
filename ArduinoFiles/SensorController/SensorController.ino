@@ -63,7 +63,7 @@ class DistanceSensor{
         return distance;
     }
     bool IsWaterRefillNeeded() {
-        int refillDistance = 20;
+        int refillDistance = 20; // set the distance that will trigger the refill
         return refillDistance <= distance;
     }
 };
