@@ -1,4 +1,4 @@
-[<img src="https://github.com/RMNorbert/AquaTherm/blob/main/Aqua.png" alt="AquaTherm" width="300">](README.md)
+[<img src="https://github.com/RMNorbert/AquaTherm/blob/main/AquaDark.png" alt="AquaTherm" width="300">](README.md)
 
 [![Python](https://img.shields.io/badge/Python-00264D.svg?logo=python&logoColor=gold&labelColor=black&style=for-the-badge)](https://www.python.org/)
 [![Tkinter](https://img.shields.io/badge/Tkinter-472DEC.svg?logo=pandas&logoColor=black&labelColor=gold&style=for-the-badge)](https://docs.python.org/3/library/tkinter.html)
