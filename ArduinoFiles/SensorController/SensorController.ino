@@ -1,5 +1,6 @@
 #include <Servo.h>
 #include <SimpleDHT.h>
+#include <Ultrasonic.h>
 
 String cmd;
 String response;
@@ -39,11 +40,31 @@ class DHT22Sensor {
       response = String(currentTemperature) + "," + String(currentHumidity) + ",";
     }
 
+    bool IsSensorStateOn() {
+      return isOn;
+    }
     float GetCurrentHumidity() {
       return currentHumidity;
     }
     float GetCurrentTemperature() {
       return currentTemperature;
+    }
+};
+// for 3 pin sensor
+class DistanceSensor{
+    Ultrasonic distanceSensor;
+    int distance = 0;
+    public:
+    DistanceSensor(int pin){
+        this -> distanceSensor = Ultrasonic(pin);
+    }
+    int GetDistanceInCm() {
+        distance = ultrasonic.read();
+        return distance;
+    }
+    bool IsWaterRefillNeeded() {
+        int refillDistance = 20;
+        return refillDistance <= distance;
     }
 };
 
@@ -160,10 +181,28 @@ class Fan{
 TapServo tapServo;
 Fan fan(3);  // change to the pin to which the Gate is connected to
 DHT22Sensor dht22Sensor(2);  // change to the pin to which the sensor is connected to
+DistanceSensor distanceSensor(13); // change to the pin to which the sensor is connected to
 
 void setup(){
     Serial.begin(115200);
     tapServo.Attach(5);  // change to the pin to which the sensor is connected to
+}
+
+void manageWaterLevel(int humidity) {
+        bool refillWater = distanceSensor.IsWaterRefillNeeded();
+        bool distanceReadingIsUnSuccessful = distanceSensor.GetDistanceInCm() == 0;
+
+        if (distanceReadingIsUnSuccessful){
+            tapServo.AdjustDeviceByHumidity(humidity);
+        }
+
+        else if (refillWater && !distanceReadingIsUnSuccessful) {
+            tapServo.Open();
+        }
+
+        else if (!refillWater && !distanceReadingIsUnSuccessful) {
+            tapServo.Close();
+        }
 }
 
 void loop(){
@@ -178,12 +217,12 @@ void loop(){
         dht22Sensor.SwitchIsOnState(false);
     }
 
-    if(dht22Sensor.isOn){
+    if(dht22Sensor.IsSensorStateOn(){
         dht22Sensor.GetReadings();
         delay(500);
         float humidity = dht22Sensor.GetCurrentHumidity;
         float temperature = dht22Sensor.GetCurrentTemperature;
-        tapServo.AdjustDeviceByHumidity(humidity);
+        manageWaterLevel(humidity);
         delay(500);
         fan.AdjustDeviceByTemperature(aquariumType , temperature);
 
