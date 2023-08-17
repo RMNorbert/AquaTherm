@@ -1,4 +1,4 @@
-[<img src="https://github.com/RMNorbert/AquaTherm/blob/arduino-multiple-board/images/on.png" alt="AquaTherm" width="300">](README.md)
+[<img src="https://github.com/RMNorbert/AquaTherm/blob/main/Aqua.png" alt="AquaTherm" width="300">](README.md)
 
 [![Python](https://img.shields.io/badge/Python-00264D.svg?logo=python&logoColor=gold&labelColor=black&style=for-the-badge)](https://www.python.org/)
 [![Tkinter](https://img.shields.io/badge/Tkinter-472DEC.svg?logo=pandas&logoColor=black&labelColor=gold&style=for-the-badge)](https://docs.python.org/3/library/tkinter.html)
@@ -26,32 +26,105 @@
 
 ## Description:
 
-AquaTherm is a sensor reading based project using both Arduino and Raspberry releated products and connects them to multiple devices at the same time. 
-This project is a small embedded systems to collect data from sensors, analyse the data, and either take an appropriate action or send that sensor data to another system for processing and responsing with a command to the appropriate device to take action. One of the many challenges of embedded systems design is the fact that parts that are used today may be out of production tomorrow, or system requirements may change and the sensors may need to be changed to a different one down the road.
+AquaTherm is a project that provides both Desktop and Web GUIs, supporting USB or Wi-Fi connected devices. It involves sensor readings, utilizing Arduino and Raspberry-related products to connect to multiple devices. The project collects sensor data, performs analysis, takes appropriate actions, and communicates with other systems for further processing.
 
-The project provide both Desktop and Web GUI with either for usb or wi-fi connected devices.
+## Used Technologies & Packages:
 
-## Used Technologies:
+AquaTherm integrates a range of cutting-edge technologies and packages:
+
+- [Python](https://www.python.org/)
+- [Tkinter](https://docs.python.org/3/library/tkinter.html)
+- [SQLAlchemy](https://www.sqlalchemy.org/)
+- [Flask](https://flask.palletsprojects.com/en/2.3.x/)
+- [Prometheus](https://prometheus.io/)
+- [Grafana](https://grafana.com/)
+- [SQLite](https://www.sqlite.org/index.html)
+- [Docker](https://www.docker.com/)
+- [Arduino](https://www.arduino.cc/)
+- [Raspberry Pi](https://www.raspberrypi.com/)
+- [jQuery](https://jquery.com/)
 
 ## Features
 
-- **Temperature and Humidity Reading, Displaying and Managing**
-  **Automated Actions To Specifig Scenarios:**
-- **Decreasing or Increasing Temperature**
-- **Increasing Aquarium Water Level**
+AquaTherm offers a range of features that make it a powerful tool for managing sensor data and automating actions:
+
+- **Temperature and Humidity Reading, Displaying, and Management**
+- **Automated Actions for Specific Scenarios:**
+  - **Decreasing or Increasing Temperature**
+  - **Increasing Aquarium Water Level**
 
 ## How Does it Work?
 
 ## Getting Started
 
-## Prerequisites
+To get started with AquaTherm, make sure you meet the following prerequisites:
 
+- Python installed on your machine. [Download Python](https://www.python.org/) from the official website and follow the installation instructions.
+
+If you plan to deploy AquaTherm using Docker containers, follow these steps:
+
+ Install Docker:
+   - For Linux: Follow the instructions on the [official Docker website](https://docs.docker.com/get-docker/).
+   - For Windows or macOS: Install [Docker Desktop](https://www.docker.com/products/docker-desktop) for an easy-to-use Docker environment.
+
+   After installing Docker, ensure it's running by opening a terminal or command prompt and running the command `docker --version`.
+
+   **Note:** Docker is optional and recommended for deployment scenarios. If you're using Docker, it can help manage dependencies and ensure consistent environments.
+   
+   
 ### Installation
+**1. Clone the repository:**
 
+   Start by cloning the AquaTherm repository to your local machine. Open a terminal or command prompt and run the following command:
+
+   ```
+   git clone https://github.com/RMNorbert/AquaTherm.git
+   ```
+   install the required packages with the following command:
+   ```
+   pip install -r requirements.txt
+   ```
+   if raspberry sensors used install the the required package with the following command:
+   bash
+   ```
+   pip install adafruit-circuitpython-dht
+   ```
+   C library for interacting with Linux GPIO device:
+   ```
+   sudo apt-get install libgpiod2
+   ```
+**2. A, Run the Desktop app with:**
+
+   bash
+   ```
+   python3 main.py
+   ```
+**2. B, Run the Web app with:**
+   bash
+   ```
+   python3 web_app.py
+   ```
+ Access the application:
+ Once the Web app is running, you can access it in your web browser at http://localhost:5000.
+
+ **2. C, Run the dockerized version with:**
+   - Navigate to the project directory containing the ```docker-deploy.yml``` file.
+   - Run the command ```docker-compose up --build``` to build and start the project.
+
+   The `docker-deploy.yml` file defines the services and configurations needed for running your application in a Docker container. It simplifies deployment and ensures consistent setups across environments.
+
+ Access the application:
+ 
+ Once the Web app is running, you can access it in your web browser at http://localhost:5000.
+ 
+ Access Prometheus at http://localhost:9090
+ 
+ Grafana at http://localhost:3000
+ 
 ## License
 
-This project is licensed under the Unlicense License - see the [License](License) file for details.
+This project is licensed under the MIT License - see the [License](License) file for details.
 
 ## 
 Then sensor controller files can be simulated on https://wokwi.com/ or
-with the VS code extension: named : Wokwi Simulator
+with the VS code extension named : Wokwi Simulator
