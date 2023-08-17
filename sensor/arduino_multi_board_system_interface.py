@@ -3,16 +3,19 @@ from database.db import *
 from sensor.simulate.simulate_fan_controller import *
 from sensor.simulate.simulate_tap_controller import *
 from sensor.simulate.simulate_temperature_and_humidity_controller import *
+from sensor.simulate.simulate_distance_controller import *
 """ Use in case of sensors connected
 from sensor.arduino.arduino_fan_controller import * # in case of arduino
 from sensor.arduino.arduino_tap_controller import *
 from sensor.arduino.arduino_temperature_and_humidity_controller import *
 
 th_controller = ArduinoTemperatureAndHumidityController()
+d_controller = ArduinoDistanceController()
 f_controller = ArduinoFanController()
 t_controller = ArduinoTapController()
 """
 th_controller = TemperatureAndHumidityControllerSimulator()
+d_controller = DistanceControllerSimulator()
 f_controller = FanControllerSimulator()
 t_controller = TapControllerSimulator()
 
@@ -26,10 +29,11 @@ def switch_temperature_and_humidity_sensor(command):
 
 def read_sensor(aquarium_type):
     reading = th_controller.read_sensor(aquarium_type)  # use this for simulated readings
+    distance = d_controller.get_distance()
     # reading = th_controller.read_sensor() # use this in case of sensors connected
     temperature = reading[0]
     humidity = reading[1]
-    status = get_status(temperature, humidity, aquarium_type)
+    status = get_status(temperature, humidity, aquarium_type, distance)
     store_readings(temperature, humidity, status)
 
     return (temperature, humidity, status)
