@@ -1,0 +1,86 @@
+version: '3'
+
+networks:
+  AquaThermNetwork:
+    driver: bridge
+# both prometheus and grafana need volume to store data
+# by default prometheus remove 15 day old data, to modify it use for example: --storage.tsdb.retention.time:30d
+volumes:
+  prometheus-data:
+    driver: local
+  grafana-data:
+    driver: local
+
+services:
+  aquatherm:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: aquatherm
+    image: aquatherm
+    networks:
+      - AquaThermNetwork
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    networks:
+      - AquaThermNetwork
+    depends_on:
+      - node_exporter
+      - cadvisor
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus/config/prometheus.yml:/prometheus/config/prometheus.yml:ro
+      - prometheus-data:/prometheus
+    command: "--config.file=/prometheus/config/prometheus.yml"
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana-oss:latest
+    container_name: grafana
+    networks:
+      - AquaThermNetwork
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_AUTH_BASIC_ENABLED=false
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+    volumes:
+      - grafana-data:/var/lib/grafana
+    restart: unless-stopped
+
+  node_exporter:
+    image: quay.io/prometheus/node-exporter:latest
+    container_name: node_exporter
+    networks:
+      - AquaThermNetwork
+    command: "--path.rootfs=/host"
+    pid: host
+    restart: unless-stopped
+    volumes:
+        - "/:/host:ro,rslave"
+#for container  statistics
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor:latest
+    container_name: cadvisor
+    ports:
+      - "8081:8080"
+    #network_mode: host
+    networks:
+      - AquaThermNetwork
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:rw
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+      - /dev/disk/:/dev/disk:ro
+    devices:
+      - /dev/kmsg
+    privileged: true
+    restart: unless-stopped
