@@ -1,20 +1,7 @@
-# pip3 install adafruit-circuitpython-dht
-# sudo apt-get install libgpiod2
 # imports for using a sensor to provide readings
 import time
 import board
 import adafruit_dht
-
-# 1 To be able to connect to the sensor write the Raspberry OS with Raspberry Pi Imager to an sd card
-# 2 Insert the sd card to the board
-# 3 A, Make a connection: with usb to the computer or connection can be made directly to mouse, keyboard, screen, speakers
-# to the Raspberry board in this case the power needed for the board to turn on will be provided by the usb connection.
-# 3 B, Finish the setup by starting the board (screen and at least a keyboard will be needed)
-# during the setup the credentials for wifi connection can be set (if the board have a wireless connectivity)
-# 3 C, After finishing the setup it is possible to just make a connection with the  ethernet cable or wifi.
-# If only wifi connection or ethernet port used its important to provide a power outlet because raspberry pi does not have one initially.
-# Initial the dht device, with data pin connected to:
-# adafruit_dht.theTypeOfTheSensor(set here the board pin which the sensor is connected to)
 
 """
  you can pass DHT22 use_pulseio=False if you wouldn't like to use pulseio.

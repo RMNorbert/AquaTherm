@@ -1,6 +1,5 @@
 from tkinter import *
 import tkinter as tk
-from tkinter import ttk, messagebox
 from sensor.arduino_multi_board_system_interface import *
 # from sensor.arduino_one_board_system_interface import * # in case of one board
 

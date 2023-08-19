@@ -1,11 +1,5 @@
-# to use pip install pyserial
 import serial
 import time
-# 1st step : To set Arduino -> tools -> manage libraries -> search simple dht , install the package
-# 2nd step : file -> samples -> select the sensor
-# 3rd step: Use Arduino IDE to upload the firmware onto the arduino board
-# with the current settings connect the sensor data wire to the second digital input
-# the correct connection settings can be found in the arduino application -> tools -> port
 
 
 class ArduinoTemperatureAndHumidityController:
