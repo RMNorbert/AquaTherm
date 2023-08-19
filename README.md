@@ -20,17 +20,18 @@
 # AquaTherm
 
 [Table of content:](#description)
-- [Used Technologies](#used-technologies)
+- [Used Technologies And Packages](#used-technologies-and-packages)
 - [Features](#features)
+- [Used Sensors](#used-sensors)
 - [Getting Started](#getting-started)
-
-## Description:
+- [Installation](#installation)
+- [License](#license)
+  
+## Description
 
 AquaTherm is a project that provides both Desktop and Web GUIs, supporting USB or Wi-Fi connected devices. It involves sensor readings, utilizing Arduino and Raspberry-related products to connect to multiple devices. The project collects sensor data, performs analysis, takes appropriate actions, and communicates with other systems for further processing.
 
-## Used Technologies & Packages:
-
-AquaTherm integrates a range of cutting-edge technologies and packages:
+## Used Technologies And Packages
 
 - [Python](https://www.python.org/)
 - [Tkinter](https://docs.python.org/3/library/tkinter.html)
@@ -40,27 +41,27 @@ AquaTherm integrates a range of cutting-edge technologies and packages:
 - [Grafana](https://grafana.com/)
 - [SQLite](https://www.sqlite.org/index.html)
 - [Docker](https://www.docker.com/)
+- [cAdvisor](https://github.com/google/cadvisor)
+- [Node exporter](https://github.com/prometheus/node_exporter)
 - [Arduino](https://www.arduino.cc/)
 - [Raspberry Pi](https://www.raspberrypi.com/)
 - [jQuery](https://jquery.com/)
 
 ## Features
 
-AquaTherm offers a range of features that make it a powerful tool for managing sensor data and automating actions:
+**AquaTherm offers a range of features that make it a powerful tool for managing sensor data and automating actions:**
 
  **Temperature and Humidity Reading, Displaying, and Management**
 
  **Automated Actions for Specific Scenarios:**
-  - **Decreasing Temperature**
-  - **Increasing Aquarium Water Level**
+  **Decreasing Temperature, Increasing Aquarium Water Level**
 
-## Used Sensors:
+## Used Sensors
   
   - DHT22
   - SR04
      
-## Details
- 
+## Getting Started
 
 - **The Arduino Software (IDE) was used during the creation of the sensor controlling releated codes.**
 
@@ -80,9 +81,9 @@ The Arduino Integrated Development Environment - or Arduino Software (IDE) - con
   1. [Download](https://www.raspberrypi.com/software/) and install the Raspberry Pi Imager and follow the [instructions](https://www.raspberrypi.com/documentation/computers/getting-started.html) provided on the official page.
   2. After the installation you can use the board with the sensors specified in the **Used Sensor** section.
 
-## Getting Started
+In either cases both the pin in the sensor controller files and baud rate can be customized in both the sensor controller files and the python files in ./sensor/arduino directory and the ./sensor/raspberry directory if the values i used are not adequate. The pins(2 - temperature and humidity, 13 - distance, 3 - fan , 5 - tap) the baud rate 115200
 
-To get started with AquaTherm, make sure you meet the following prerequisites:
+-**To get started with AquaTherm, make sure you meet the following prerequisites:**
 
 - Python installed on your machine. [Download Python](https://www.python.org/) from the official website and follow the installation instructions.
 
@@ -150,6 +151,6 @@ If you plan to deploy AquaTherm using Docker containers, follow these steps:
 
 This project is licensed under the MIT License - see the [License](License) file for details.
 
-## 
+##
 Then sensor controller files can be simulated on https://wokwi.com/ or
 with the VS code extension named : Wokwi Simulator
