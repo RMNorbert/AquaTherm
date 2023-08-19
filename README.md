@@ -48,12 +48,37 @@ AquaTherm integrates a range of cutting-edge technologies and packages:
 
 AquaTherm offers a range of features that make it a powerful tool for managing sensor data and automating actions:
 
-- **Temperature and Humidity Reading, Displaying, and Management**
-- **Automated Actions for Specific Scenarios:**
-  - **Decreasing or Increasing Temperature**
+ **Temperature and Humidity Reading, Displaying, and Management**
+
+ **Automated Actions for Specific Scenarios:**
+  - **Decreasing Temperature**
   - **Increasing Aquarium Water Level**
 
-## How Does it Work?
+## Used Sensors:
+  
+  - DHT22
+  - SR04
+     
+## Details
+ 
+
+- **The Arduino Software (IDE) was used during the creation of the sensor controlling releated codes.**
+
+**To upload the codes to the board('s) :**
+  1. [Download](https://www.arduino.cc/en/software) and install the Arduino Software IDE.
+  2. Connect your Arduino board to your device.
+  3. Open the Arduino Software (IDE).
+
+The Arduino Integrated Development Environment - or Arduino Software (IDE) - connects to the Arduino boards to upload programs and communicate with them. Programs written using Arduino Software (IDE) are called sketches. These sketches are written in the text editor and are saved with the file extension .ino.
+
+  4. Select the right board & port. This is done from the toolbar. Make sure you select the board that you are using. If you cannot find your board, you can add it from the board manager in the sidebar.
+  5. To upload the code to your board, simply click on the arrow in the top left corner. This process takes a few seconds, and it is important to not disconnect the board during this process. If the upload is successful, the message "Done uploading" will appear in the bottom output area.
+  6. Once the upload is complete, you can use the board with the sensors specified in the **Used Sensor** section.
+ 
+-**For Raspberry Pi:**
+**To upload the codes to the board('s) :**
+  1. [Download](https://www.raspberrypi.com/software/) and install the Raspberry Pi Imager and follow the [instructions](https://www.raspberrypi.com/documentation/computers/getting-started.html) provided on the official page.
+  2. After the installation you can use the board with the sensors specified in the **Used Sensor** section.
 
 ## Getting Started
 
