@@ -1,4 +1,3 @@
-import time
 from flask import Flask, request, render_template, jsonify
 from prometheus_flask_exporter import PrometheusMetrics
 from prometheus.metrics import *
@@ -11,7 +10,6 @@ metrics.info('app_info', 'Application info', version='1.0.0')
 aquarium_type = 'cold'
 state = 'OFF'
 initial_value = '...'
-
 
 @app.get('/')
 def index():
@@ -64,13 +62,15 @@ def update_data():
                        humidity=humidity,
                        status=status,
                        fanStatus=fan_status,
-                       tapStatus=tap_status)
+                       tapStatus=tap_status
+                       )
     else:
         return jsonify(temperature=initial_value,
                        humidity=initial_value,
                        status=initial_value,
                        fanStatus='Fan: ' + initial_value,
-                       tapStatus='Tap: ' + initial_value)
+                       tapStatus='Tap: ' + initial_value
+                       )
 
 
 @app.route('/state', methods=['POST'])

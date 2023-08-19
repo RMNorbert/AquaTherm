@@ -61,4 +61,3 @@ def control_tap(status):
         return t_controller.switch_tap('off')
     else:
         return 'Tap: turned off'
-

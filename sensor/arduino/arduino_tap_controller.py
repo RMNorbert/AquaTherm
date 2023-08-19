@@ -1,11 +1,9 @@
-# to use pip install pyserial
 import serial
 import time
-# set the port and baud rate
 
 
 class ArduinoTapController:
-    def __init__(self, port='COM7', baud_rate=115200):
+    def __init__(self, port='COM7', baud_rate=115200):  # set the port and baud rate
         self.port = port
         self.baud_rate = baud_rate
         self.ser_t = None
