@@ -17,7 +17,7 @@
 [<img src="https://github.com/RMNorbert/AquaTherm/blob/main/images/connection.png" alt="usb" width="350">](#getting-started)
 
 [![License: MIT](https://img.shields.io/badge/-MIT-blue.svg?label=license&logoColor=white&labelColor=242526&style=for-the-badge)](LICENSE "License")
-[![Last Commit](https://img.shields.io/github/last-commit/RMNorbert/ExcelVisualizer?logo=github&label=Last%20Commit&style=for-the-badge&display_timestamp=committer&labelColor=242526)](https://github.com/RMNorbert/ExcelVisualizer/commits "Commit History")
+[![Last Commit](https://img.shields.io/github/last-commit/RMNorbert/AquaTherm?logo=github&label=Last%20Commit&style=for-the-badge&display_timestamp=committer&labelColor=242526)](https://github.com/RMNorbert/AquaTherm/commits "Commit History")
 
 </div>
 
