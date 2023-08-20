@@ -7,14 +7,20 @@
 [![Prometheus](https://img.shields.io/badge/Prometheus-242526.svg?logo=prometheus&logoColor=white&labelColor=C0362C&style=for-the-badge)](https://prometheus.io/)
 [![Grafana](https://img.shields.io/badge/Grafana-242526.svg?logo=Grafana&logoColor=DD4F00&labelColor=black&style=for-the-badge)](https://grafana.com/)
 
+[![jQuery](https://img.shields.io/badge/-jQuery-222222.svg?logo=jquery&logoColor=lightblue&labelColor=darkblue&style=for-the-badge)](https://jquery.com/)
 [![SQLite](https://img.shields.io/badge/-SQLite-222222.svg?logo=SQLite&logoColor=0052A2&labelColor=222222&style=for-the-badge)](https://www.sqlite.org/index.html)
 [![Docker](https://img.shields.io/badge/-docker-blue.svg?logo=docker&logoColor=0197f6&labelColor=222222&style=for-the-badge)](https://www.docker.com/)
 [![Arduino](https://img.shields.io/badge/-Arduino-14A3C7.svg?logo=Arduino&logoColor=14A3C7&labelColor=222222&style=for-the-badge)](https://www.arduino.cc/)
 [![Raspberry Pi](https://img.shields.io/badge/-Raspberry%20Pi-222222.svg?logo=Raspberrypi&logoColor=black&labelColor=E20B2D&style=for-the-badge)](https://www.raspberrypi.com/)
-[![jQuery](https://img.shields.io/badge/-jQuery-222222.svg?logo=jquery&logoColor=lightblue&labelColor=darkblue&style=for-the-badge)](https://jquery.com/)
+![Digi](https://img.shields.io/badge/-Digi-blue.svg?label=XCTU-XBEE&logo=Digi&logoColor=white&labelColor=242526&style=for-the-badge)
+
+![USB](https://img.shields.io/badge/-USB-blue.svg?label=USB&logo=USB&logoColor=white&labelColor=242526&style=for-the-badge)
+![Wifi](https://img.shields.io/badge/-Wifi-blue.svg?label=Wifi&logo=USB&logoColor=white&labelColor=242526&style=for-the-badge)
+![Radio](https://img.shields.io/badge/-Radio-blue.svg?label=Radio&logo=USB&logoColor=white&labelColor=242526&style=for-the-badge)
 
 [![License: MIT](https://img.shields.io/badge/-MIT-blue.svg?label=license&logoColor=white&labelColor=242526&style=for-the-badge)](LICENSE "License")
 [![Last Commit](https://img.shields.io/github/last-commit/RMNorbert/ExcelVisualizer?logo=github&label=Last%20Commit&style=for-the-badge&display_timestamp=committer&labelColor=242526)](https://github.com/RMNorbert/ExcelVisualizer/commits "Commit History")
+
 </div>
 
 # AquaTherm
@@ -45,6 +51,7 @@ AquaTherm is a project that provides both Desktop and Web GUIs, supporting USB, 
 - [Node exporter](https://github.com/prometheus/node_exporter)
 - [Arduino](https://www.arduino.cc/)
 - [Raspberry Pi](https://www.raspberrypi.com/)
+- [Digi](https://www.digi.com/)
 - [jQuery](https://jquery.com/)
 
 ## Features
