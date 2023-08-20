@@ -29,7 +29,7 @@
   
 ## Description
 
-AquaTherm is a project that provides both Desktop and Web GUIs, supporting USB or Wi-Fi connected devices. It involves sensor readings, utilizing Arduino and Raspberry-related products to connect to multiple devices. The project collects sensor data, performs analysis, takes appropriate actions, and communicates with other systems for further processing.
+AquaTherm is a project that provides both Desktop and Web GUIs, supporting USB, Wi-Fi and Radio communication between the devices. It involves sensor readings, utilizing Arduino and Raspberry-related products to connect to multiple devices. The project collects sensor data, performs analysis, takes appropriate actions, and communicates with other systems for further processing.
 
 ## Used Technologies And Packages
 
@@ -63,7 +63,7 @@ AquaTherm is a project that provides both Desktop and Web GUIs, supporting USB o
      
 ## Getting Started
 
-- **The Arduino Software (IDE) was used during the creation of the sensor controlling releated codes.**
+**- The Arduino Software (IDE) was used during the creation of the sensor controlling releated codes.**
 
 **To upload the codes to the board('s) :**
   1. [Download](https://www.arduino.cc/en/software) and install the Arduino Software IDE.
@@ -76,14 +76,20 @@ The Arduino Integrated Development Environment - or Arduino Software (IDE) - con
   5. To upload the code to your board, simply click on the arrow in the top left corner. This process takes a few seconds, and it is important to not disconnect the board during this process. If the upload is successful, the message "Done uploading" will appear in the bottom output area.
   6. Once the upload is complete, you can use the board with the sensors specified in the **Used Sensor** section.
  
--**For Raspberry Pi:**
+**- For Raspberry Pi:**
 **To upload the codes to the board('s) :**
   1. [Download](https://www.raspberrypi.com/software/) and install the Raspberry Pi Imager and follow the [instructions](https://www.raspberrypi.com/documentation/computers/getting-started.html) provided on the official page.
   2. After the installation you can use the board with the sensors specified in the **Used Sensor** section.
 
 In either cases both the pin in the sensor controller files and baud rate can be customized in both the sensor controller files and the python files in ./sensor/arduino directory and the ./sensor/raspberry directory if the values i used are not adequate. The pins(2 - temperature and humidity, 13 - distance, 3 - fan , 5 - tap) the baud rate 115200
 
--**To get started with AquaTherm, make sure you meet the following prerequisites:**
+**- For Radio Communication :**
+  1. 2 Xbee Radios modell, to program the radios, a SparkFun USB Explorer needed and finally an Xbee Shield. The shield allows you to plug the Xbee radio into the Arduino.
+  2. [Download](https://www.digi.com/products/embedded-systems/digi-xbee/digi-xbee-tools/xctu) and install the XCTU software to program the radios. AES encryption can be created during the configuration of the connected radio.
+  3. Set the port and the baud rate . 
+
+
+**- To get started with AquaTherm, make sure you meet the following prerequisites:**
 
 - Python installed on your machine. [Download Python](https://www.python.org/) from the official website and follow the installation instructions.
 
