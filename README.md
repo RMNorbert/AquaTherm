@@ -14,7 +14,7 @@
 [![Raspberry Pi](https://img.shields.io/badge/-Raspberry%20Pi-222222.svg?logo=Raspberrypi&logoColor=black&labelColor=E20B2D&style=for-the-badge)](https://www.raspberrypi.com/)
 ![Digi](https://img.shields.io/badge/-Digi-blue.svg?label=XCTU-XBEE&logo=Digi&logoColor=white&labelColor=242526&style=for-the-badge)
 
-[<img src="https://github.com/RMNorbert/AquaTherm/blob/RMNorbert-patch-2/images/connection.png" alt="usb" width="350">](#getting-started)
+[<img src="https://github.com/RMNorbert/AquaTherm/blob/main/images/connection.png" alt="usb" width="350">](#getting-started)
 
 [![License: MIT](https://img.shields.io/badge/-MIT-blue.svg?label=license&logoColor=white&labelColor=242526&style=for-the-badge)](LICENSE "License")
 [![Last Commit](https://img.shields.io/github/last-commit/RMNorbert/ExcelVisualizer?logo=github&label=Last%20Commit&style=for-the-badge&display_timestamp=committer&labelColor=242526)](https://github.com/RMNorbert/ExcelVisualizer/commits "Commit History")
