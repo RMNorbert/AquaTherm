@@ -14,8 +14,9 @@
 [![Raspberry Pi](https://img.shields.io/badge/-Raspberry%20Pi-222222.svg?logo=Raspberrypi&logoColor=black&labelColor=E20B2D&style=for-the-badge)](https://www.raspberrypi.com/)
 ![Digi](https://img.shields.io/badge/-Digi-blue.svg?label=XCTU-XBEE&logo=Digi&logoColor=white&labelColor=242526&style=for-the-badge)
 
+[<img src="https://github.com/RMNorbert/AquaTherm/blob/RMNorbert-patch-2/images/usb.png" alt="usb" width="20"> USB](#)
 ![USB](https://img.shields.io/badge/-USB-blue.svg?label=USB&logo=USB&logoColor=white&labelColor=242526&style=for-the-badge)
-![Wifi](https://img.shields.io/badge/-Wifi-blue.svg?label=Wifi&logo=USB&logoColor=white&labelColor=242526&style=for-the-badge)
+![Wifi](https://img.shields.io/badge/-Wifi-blue.svg?label=Wifi&logo=src="https://github.com/RMNorbert/AquaTherm/blob/RMNorbert-patch-2/images/usb.png"&logoColor=white&labelColor=242526&style=for-the-badge)
 ![Radio](https://img.shields.io/badge/-Radio-blue.svg?label=Radio&logo=USB&logoColor=white&labelColor=242526&style=for-the-badge)
 
 [![License: MIT](https://img.shields.io/badge/-MIT-blue.svg?label=license&logoColor=white&labelColor=242526&style=for-the-badge)](LICENSE "License")
