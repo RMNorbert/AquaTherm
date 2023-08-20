@@ -2,7 +2,7 @@ import time
 from flask import Flask, request, render_template, jsonify
 from prometheus_flask_exporter import PrometheusMetrics
 from prometheus.metrics import *
-from sensor.arduino_multi_board_system_interface import *
+from sensor.arduino_one_board_system_interface import *
 
 app = Flask(__name__)
 metrics = PrometheusMetrics(app)
@@ -51,8 +51,8 @@ def update_data():
         humidity = reading[1]
         status = reading[2]
 
-        fan_status = str(control_fan(status))
-        tap_status = str(control_tap(status))
+        fan_status = str(reading[3])
+        tap_status = str(reading[4])
 
         graphs['ct'].set(temperature)
         graphs['ch'].set(humidity)
