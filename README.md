@@ -33,7 +33,7 @@
   
 ## Description
 
-AquaTherm is a project that provides both Desktop and Web GUIs, involves sensor readings, collecting sensor reading datas, performing analysis, taking appropriate actions according to collected datas and communicating with other systems for further processing, by utilizing and connecting multiple Arduino and Raspberry-related products to multiple devices through USB, Wi-Fi or Radio communication.
+AquaTherm is a project that designed to revolutionize aquarium management by ensuring precise control over temperature and water levels. While offering both Desktop and Web GUIs, involves sensor readings, collecting sensor reading data, performing analysis, taking appropriate actions according to collected data and communicating with other systems for further processing, by utilizing and connecting multiple Arduino and Raspberry-related products to multiple devices through USB, Wi-Fi or Radio communication.
 
 ## Used Technologies And Packages
 
