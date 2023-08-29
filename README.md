@@ -33,7 +33,7 @@
   
 ## Description
 
-AquaTherm is a project that provides both Desktop and Web GUIs, supporting USB, Wi-Fi and Radio communication between the devices. It involves sensor readings, utilizing Arduino and Raspberry-related products to connect to multiple devices. The project collects sensor data, performs analysis, takes appropriate actions, and communicates with other systems for further processing.
+AquaTherm is a project that provides both Desktop and Web GUIs, involves sensor readings, collecting sensor reading datas, performing analysis, taking appropriate actions according to collected datas and communicating with other systems for further processing, by utilizing and connecting multiple Arduino and Raspberry-related products to multiple devices through USB, Wi-Fi or Radio communication.
 
 ## Used Technologies And Packages
 
