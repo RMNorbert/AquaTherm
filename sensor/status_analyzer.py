@@ -1,7 +1,7 @@
 def analyze_aquarium_status(lower_bound, upper_bound, temp, humidity, distance):
     status = ''
     if humidity < 40.0 or distance > 20:
-        status += 'low water level with '
+        status += 'low water level with \n '
     if temp > upper_bound:
         status += 'high temperature'
     elif temp >= upper_bound - 0.5:

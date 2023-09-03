@@ -11,6 +11,7 @@ aquarium_type = 'cold'
 state = 'OFF'
 initial_value = '...'
 
+
 @app.get('/')
 def index():
     fan_status = 'turned off'
