@@ -1,6 +1,6 @@
 from gui.gui_config import *
 from sensor.arduino_multi_board_system_interface import *
-# from sensor.arduino_one_board_system_interface import * # in case of one board
+
 aquarium_type = 'cold'
 sensor_on = False
 
