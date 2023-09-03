@@ -25,6 +25,7 @@ class Readings(Base):
     def __repr__(self):
         return f"{self.time}: {self.temperature}°C | {self.humidity}%  |  Status: {self.status}"
 
+
 # Create file database and connect to the sqlite db and creates tables from the classes that extends base
 engine = create_engine(f"sqlite:///database/mydb.db", echo=True)
 Base.metadata.create_all(bind=engine)
@@ -32,11 +33,6 @@ Base.metadata.create_all(bind=engine)
 Session = sessionmaker(bind=engine)
 session = Session()
 # add and commit the new record
-
-## average of about 2 inches of water is evaporated from their fish tanksgetting as high as 5 inches in a week
-# dehumidifier will increase the evaporation from the fish tank natural process in the aquarium life cycle
-#increase humidity start evaporation / dehumidifier
-#increase/dec temp / fan
 
 
 def store_readings(temperature, humidity, status):
@@ -50,7 +46,7 @@ def get_all_readings():
 
 
 def get_all_warnings():
-    return session.query(Readings).filter(Readings.status != 'normal')
+    return session.query(Readings).filter(Readings.status != "normal")
 
 
 def get_last_readings():
