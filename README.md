@@ -63,9 +63,24 @@ AquaTherm is a project that designed to revolutionize aquarium management by ens
 
 ## Used Sensors
   
-  - DHT22
-  - SR04
-     
+  - **DHT22** :
+    A pre-calibrated, SWI digital sensor with fast response time used to measure temperature and humidity.
+
+    Measurement capabilities with a high degree of accuracy:
+      - Temperature with a range of -40°C to 80°C (-40°F to 176°F).
+      - Relative humidity within a range of 0% to 100% RH.
+    
+    Operating voltage: Compatible with 3.3V or 5V power supplies.
+
+  - **SR04 AKA HC-SR04**:
+    An Ultrasonic Sensor used to measure distance.
+
+    Measurement capabilities:
+      - Used for measuring distances in the range of 2 cm (0.79 inches) to 400 cm (157.5 inches).
+      - Typical accuracy of about ±1 cm.  
+    
+    Operating voltage: Compatible with 3.3V or 5V power supplies.
+
 ## Getting Started
 
 **- The Arduino Software (IDE) was used during the creation of the sensor controlling releated codes.**
