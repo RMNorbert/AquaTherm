@@ -22,7 +22,7 @@
 </div>
 
 # AquaTherm
-
+---
 [Table of content:](#description)
 - [Used Technologies And Packages](#used-technologies-and-packages)
 - [Features](#features)
@@ -30,11 +30,12 @@
 - [Getting Started](#getting-started)
 - [Installation](#installation)
 - [License](#license)
-  
+---  
 ## Description
 
 AquaTherm is a project that designed to revolutionize aquarium management by ensuring precise control over temperature and water levels. While offering both Desktop and Web GUIs, involves sensor readings, collecting sensor reading data, performing analysis, taking appropriate actions according to collected data and communicating with other systems for further processing, by utilizing and connecting multiple Arduino and Raspberry-related products to multiple devices through USB, Wi-Fi or Radio communication.
 
+---
 ## Used Technologies And Packages
 
 - [Python](https://www.python.org/)
@@ -51,16 +52,17 @@ AquaTherm is a project that designed to revolutionize aquarium management by ens
 - [Raspberry Pi](https://www.raspberrypi.com/)
 - [Digi](https://www.digi.com/)
 - [jQuery](https://jquery.com/)
-
+---
 ## Features
 
 **AquaTherm offers a range of features that make it a powerful tool for managing sensor data and automating actions:**
 
- **Temperature and Humidity Reading, Displaying, and Management**
+ - **Temperature and Humidity Reading, Displaying, and Management**
 
- **Automated Actions for Specific Scenarios:**
-  **Decreasing Temperature, Increasing Aquarium Water Level**
+ - **Automated Actions for Specific Scenarios:**
+   - **Decreasing Temperature, Increasing Aquarium Water Level**
 
+---
 ## Used Sensors
   
   - **DHT22** :
@@ -70,7 +72,8 @@ AquaTherm is a project that designed to revolutionize aquarium management by ens
       - Temperature with a range of -40°C to 80°C (-40°F to 176°F).
       - Relative humidity within a range of 0% to 100% RH.
     
-    Operating voltage: Compatible with 3.3V or 5V power supplies.
+    Operating voltage:
+      - Compatible with 3.3V or 5V power supplies.
 
   - **SR04 AKA HC-SR04**:
     An Ultrasonic Sensor used to measure distance.
@@ -79,8 +82,10 @@ AquaTherm is a project that designed to revolutionize aquarium management by ens
       - Used for measuring distances in the range of 2 cm (0.79 inches) to 400 cm (157.5 inches).
       - Typical accuracy of about ±1 cm.  
     
-    Operating voltage: Compatible with 3.3V or 5V power supplies.
+    Operating voltage:
+      - Compatible with 3.3V or 5V power supplies.
 
+---
 ## Getting Started
 
 **- The Arduino Software (IDE) was used during the creation of the sensor controlling releated codes.**
@@ -123,7 +128,7 @@ If you plan to deploy AquaTherm using Docker containers, follow these steps:
 
    **Note:** Docker is optional and recommended for deployment scenarios. If you're using Docker, it can help manage dependencies and ensure consistent environments.
    
-   
+---   
 ### Installation
 **1. Clone the repository:**
 
@@ -152,7 +157,7 @@ If you plan to deploy AquaTherm using Docker containers, follow these steps:
    python3 main.py
    ```
 **2. B, Run the Web app with:**
-   bash
+   
    ```
    python3 web_app.py
    ```
@@ -172,7 +177,8 @@ If you plan to deploy AquaTherm using Docker containers, follow these steps:
  Access Prometheus at http://localhost:9090
  
  Grafana at http://localhost:3000
- 
+
+--- 
 ## License
 
 This project is licensed under the MIT License - see the [License](License) file for details.
